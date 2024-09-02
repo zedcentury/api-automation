@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="api_automation_form" model="ir.ui.view">
+        <field name="name">api.automation.form</field>
+        <field name="model">api.automation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="api_endpoint"/>
+                            <field name="model_id"/>
+                            <field name="method"/>
+                        </group>
+                        <group>
+                            <field name="args" widget="ace"/>
+                            <field name="kwargs" widget="ace"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="api_automation_tree" model="ir.ui.view">
+        <field name="name">api.automation.tree</field>
+        <field name="model">api.automation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="api_endpoint"/>
+                <field name="model_id"/>
+                <field name="method"/>
+                <field name="args"/>
+                <field name="kwargs"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="api_automation_act_window" model="ir.actions.act_window">
+        <field name="name">API Endpoints</field>
+        <field name="res_model">api.automation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No API Endpoints found ! Let's create one
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="api_automation_menu" name="API Endpoints" action="api_automation_act_window" sequence="1"/>
+</odoo>
