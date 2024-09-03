@@ -1,2 +1,2 @@
 from . import models
-from . import api_automation
+from . import api_endpoint

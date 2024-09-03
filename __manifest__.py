@@ -23,7 +23,7 @@ API Automation
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/api_automation.xml'
+        'views/api_endpoint.xml'
         # 'views/views.xml',
         # 'views/templates.xml',
     ],
